@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { ChangeThemeService } from 'src/app/share/services/change-theme.service';
 
 @Component({
   selector: 'app-settings',
@@ -9,7 +10,10 @@ import { MenuItem } from 'primeng/api';
 export class SettingsComponent {
   items: MenuItem[];
 
+  constructor(private themeService: ChangeThemeService) {}
+
   ngOnInit() {
+    this.themeService.themeAfterReloading();
     this.items = [
       {
         label: 'Language',
@@ -18,7 +22,20 @@ export class SettingsComponent {
       },
       {
         label: 'Theme',
-        items: [{ icon: 'pi pi-sun' }, { icon: 'pi pi-moon' }],
+        items: [
+          {
+            icon: 'pi pi-sun',
+            command: () => {
+              this.themeService.changeToLight();
+            },
+          },
+          {
+            icon: 'pi pi-moon',
+            command: () => {
+              this.themeService.changeToDark();
+            },
+          },
+        ],
       },
     ];
   }

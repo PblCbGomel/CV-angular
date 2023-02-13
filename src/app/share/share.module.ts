@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SettingsComponent } from './components/header/settings/settings.component';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 import { NavigationComponent } from './components/header/navigation/navigation.component';
+import { ChangeThemeService } from './services/change-theme.service';
 
 @NgModule({
   declarations: [
@@ -17,5 +18,6 @@ import { NavigationComponent } from './components/header/navigation/navigation.c
   ],
   imports: [CommonModule, ShareRoutingModule, PrimeNGModule],
   exports: [HeaderComponent, FooterComponent, PrimeNGModule],
+  providers: [ChangeThemeService],
 })
 export class ShareModule {}
