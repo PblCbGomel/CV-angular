@@ -1,1 +1,6 @@
-<p>header works!</p>
+<p-panel header="CV" [toggleable]="true" [transitionOptions]="'500ms'">
+  <ng-template pTemplate="icons">
+    <app-settings></app-settings>
+  </ng-template>
+  <app-navigation></app-navigation>
+</p-panel>

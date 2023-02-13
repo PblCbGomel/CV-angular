@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { PrimeNGModule } from './prime-ng/prime-ng.module';
 import { ShareModule } from './share/share.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { ShareModule } from './share/share.module';
     ShareModule,
     MainModule,
     PrimeNGModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
