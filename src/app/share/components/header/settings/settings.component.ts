@@ -12,12 +12,13 @@ export class SettingsComponent {
   ngOnInit() {
     this.items = [
       {
-        label: '1',
-        items: [],
+        label: 'Language',
+        icon: 'pi pi-server',
+        items: [{ label: 'En' }, { label: 'Rus' }],
       },
       {
-        label: '2',
-        items: [],
+        label: 'Theme',
+        items: [{ icon: 'pi pi-sun' }, { icon: 'pi pi-moon' }],
       },
     ];
   }
