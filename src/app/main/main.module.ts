@@ -8,6 +8,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
+import { SkillComponent } from './components/skills/skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PrimeNGModule } from '../prime-ng/prime-ng.module';
     SkillsComponent,
     ProjectsComponent,
     ContactsComponent,
+    SkillComponent,
   ],
   imports: [CommonModule, MainRoutingModule, PrimeNGModule],
   exports: [MainComponent],
