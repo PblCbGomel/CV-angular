@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { ImageModule } from 'primeng/image';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [],
@@ -15,7 +16,15 @@ import { ImageModule } from 'primeng/image';
     MenuModule,
     TabMenuModule,
     ImageModule,
+    CarouselModule,
   ],
-  exports: [PanelModule, ButtonModule, MenuModule, TabMenuModule, ImageModule],
+  exports: [
+    PanelModule,
+    ButtonModule,
+    MenuModule,
+    TabMenuModule,
+    ImageModule,
+    CarouselModule,
+  ],
 })
 export class PrimeNGModule {}
