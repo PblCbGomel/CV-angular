@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { DataService } from 'src/app/share/services/data.service';
 import { Project } from './project.interface';
 
 @Component({
@@ -7,15 +8,22 @@ import { Project } from './project.interface';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[];
+  projectsData$: Subscription;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: DataService) {}
 
   ngOnInit(): void {
-    this.http.get('assets/projects.json').subscribe((data: any) => {
-      this.projects = data['projects'];
-    });
+    this.projectsData$ = this.http
+      .getData('assets/projects.json')
+      .subscribe((data: any) => {
+        this.projects = data['projects'];
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.projectsData$.unsubscribe();
   }
 
   toProject(link: string): void {
