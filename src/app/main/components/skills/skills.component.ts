@@ -1,37 +1,23 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
   hardSkills: String[];
   softSkills: String[];
 
-  constructor() {
-    this.hardSkills = [
-      'HTML5',
-      'CSS',
-      'SASS',
-      'TypeScript',
-      'Angular',
-      'NgRx',
-      'RxJs',
-      'Angular Material',
-      'PrimeNg',
-      'Ng color',
-      'Firebase',
-      'Web-pack',
-    ];
+  constructor(private http: HttpClient) {}
 
-    this.softSkills = [
-      'Agile',
-      'Scrum',
-      'Jira',
-      'Trello',
-      'Communication',
-      'management',
-    ];
+  ngOnInit(): void {
+    this.http.get('assets/skills.json').subscribe({
+      next: (data: any) => {
+        this.hardSkills = data['hardSkills'];
+        this.softSkills = data['softSkills'];
+      },
+    });
   }
 }
