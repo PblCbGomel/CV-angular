@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { Project } from './project.interface';
 
 @Component({
@@ -6,42 +7,15 @@ import { Project } from './project.interface';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
   projects: Project[];
 
-  constructor() {
-    this.projects = [
-      {
-        name: 'Project 1',
-        link: 'https://edufpmi.bsu.by/login/index.php',
-        img: 'https://edufpmi.bsu.by/pluginfile.php/1/theme_moove/logo/1662616236/logoblue.png',
-        description: 'my first project',
-      },
-      {
-        name: 'Project 1',
-        link: 'https://edufpmi.bsu.by/login/index.php',
-        img: 'https://edufpmi.bsu.by/pluginfile.php/1/theme_moove/logo/1662616236/logoblue.png',
-        description: 'my first project',
-      },
-      {
-        name: 'Project 1',
-        link: 'https://edufpmi.bsu.by/login/index.php',
-        img: 'https://edufpmi.bsu.by/pluginfile.php/1/theme_moove/logo/1662616236/logoblue.png',
-        description: 'my first project',
-      },
-      {
-        name: 'Project 1',
-        link: 'https://edufpmi.bsu.by/login/index.php',
-        img: 'https://edufpmi.bsu.by/pluginfile.php/1/theme_moove/logo/1662616236/logoblue.png',
-        description: 'my first project',
-      },
-      {
-        name: 'Project 1',
-        link: 'https://edufpmi.bsu.by/login/index.php',
-        img: 'https://edufpmi.bsu.by/pluginfile.php/1/theme_moove/logo/1662616236/logoblue.png',
-        description: 'my first project',
-      },
-    ];
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.http.get('assets/projects.json').subscribe((data: any) => {
+      this.projects = data['projects'];
+    });
   }
 
   toProject(link: string): void {

@@ -13,11 +13,9 @@ export class SkillsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get('assets/skills.json').subscribe({
-      next: (data: any) => {
-        this.hardSkills = data['hardSkills'];
-        this.softSkills = data['softSkills'];
-      },
+    this.http.get('assets/skills.json').subscribe((data: any) => {
+      this.hardSkills = data['hardSkills'];
+      this.softSkills = data['softSkills'];
     });
   }
 }

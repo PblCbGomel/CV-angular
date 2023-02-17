@@ -1,18 +1,23 @@
-<p-carousel
-  [value]="projects"
-  [numVisible]="3"
-  [numScroll]="1"
-  [circular]="true"
->
-  <ng-template let-project pTemplate="item">
-    <div class="item flex flex-column">
-      <div class="content">
-        <h2>{{ project.name }}</h2>
-        <div class="mb-3">
-          <img [src]="project.img" class="image" />
+<div class="w-screen">
+  <p-carousel
+    [value]="projects"
+    [numVisible]="3"
+    [numScroll]="1"
+    [circular]="true"
+  >
+    <ng-template let-project pTemplate="item">
+      <div class="item flex flex-column">
+        <div
+          class="content cursor-pointer flex flex-column"
+          (click)="toProject(project.link)"
+        >
+          <h2 class="text-xl">{{ project.name }}</h2>
+          <div class="mb-3 image-container">
+            <img [src]="project.img" class="image" />
+          </div>
+          <p class="text-sm">{{ project.description }}</p>
         </div>
-        <p>{{ project.description }}</p>
       </div>
-    </div>
-  </ng-template>
-</p-carousel>
+    </ng-template>
+  </p-carousel>
+</div>
