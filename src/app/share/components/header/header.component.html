@@ -1,11 +1,6 @@
-<p-panel
-  header="CV Evgeniy Shevtsov"
-  [toggleable]="true"
-  [transitionOptions]="'400ms'"
+<header
+  class="h-4rem flex justify-content-center align-items-center border-1 surface-border px-4"
 >
-  <ng-template pTemplate="icons">
-    <app-settings></app-settings>
-  </ng-template>
-
-  <app-navigation class="flex justify-content-center"></app-navigation>
-</p-panel>
+  <app-navigation class="flex justify-content-center mr-6"></app-navigation>
+  <app-settings></app-settings>
+</header>
