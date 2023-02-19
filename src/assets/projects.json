@@ -4,49 +4,57 @@
       "name": "ColorPaletteGen",
       "link": "https://colorpalettegen-43d3a.firebaseapp.com/",
       "img": "assets/project-images/color-palette.png",
-      "description": "App that generate random color palette."
+      "descriptionEn": "App that generate random color palette.",
+      "descriptionRu": "Приложение-генератор цветовой палитры."
     },
     {
       "name": "Ciphers",
       "link": "https://ciphers-d8037.web.app/main",
       "img": "assets/project-images/ciphers.png",
-      "description": "3 type of ciphers that you can use here."
+      "descriptionEn": "3 type of ciphers that you can use here.",
+      "descriptionRu": "Три вида шифров, которые можно использовать здесь."
     },
     {
       "name": "Color Converter",
       "link": "https://pblcbgomel.github.io/colorConverter/",
       "img": "assets/project-images/color-converter.png",
-      "description": "App that have functional of converting one color type in other type."
+      "descriptionEn": "App that have functional of converting one color type in other type.",
+      "descriptionRu": "Приложение с возможностью перевода цвета из одного типа в другой."
     },
     {
       "name": "Calculator",
       "link": "https://pblcbgomel.github.io/calculator-JS/",
       "img": "assets/project-images/calculator.png",
-      "description": "Calculator on pure JS with 2 themes."
+      "descriptionEn": "Calculator on pure JS with 2 themes.",
+      "descriptionRu": "Калькулятор на чистом JS с двумя стилями."
     },
     {
       "name": "Tic-tac-toe",
       "link": "https://pblcbgomel.github.io/tic-tac-toe-RSS/",
       "img": "assets/project-images/tic-tac-toe.png",
-      "description": "Tic-tac-toe, but I used beer and wine instead of original symbols :)"
+      "descriptionEn": "Tic-tac-toe, but I used beer and wine instead of original symbols :)",
+      "descriptionRu": "Крестики-нолики, но с пивом и вином вместо стандартных символов :)"
     },
     {
       "name": "Random Jokes",
       "link": "https://pblcbgomel.github.io/random-jokes-RSS/",
       "img": "assets/project-images/random-jokes.png",
-      "description": "App that generate random wolf joke."
+      "descriptionEn": "App that generate random wolf joke.",
+      "descriptionRu": "Приложение, которая генерирует вольчьи цитаты."
     },
     {
       "name": "Music player",
       "link": "https://pblcbgomel.github.io/music-player-RSS/",
       "img": "assets/project-images/music-player.png",
-      "description": "Music player on pure JS with some functional."
+      "descriptionEn": "Music player on pure JS with some functional.",
+      "descriptionRu": "Музыкальный плеер на чистом JS с некоторым функционалом."
     },
     {
       "name": "Portfolio",
       "link": "https://pblcbgomel.github.io/portfolio-RSS/",
       "img": "assets/project-images/portfolio.png",
-      "description": "Interesting and beautiful photographer's portfolio."
+      "descriptionEn": "Interesting and beautiful photographer's portfolio.",
+      "descriptionRu": "Интересное и красивое портфолио фотографа."
     }
   ]
 }

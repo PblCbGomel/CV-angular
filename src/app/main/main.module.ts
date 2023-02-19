@@ -10,6 +10,9 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 import { SkillComponent } from './components/skills/skill/skill.component';
 import { DataService } from '../share/services/data.service';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from '../app.module';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,18 @@ import { DataService } from '../share/services/data.service';
     ContactsComponent,
     SkillComponent,
   ],
-  imports: [CommonModule, MainRoutingModule, PrimeNGModule],
+  imports: [
+    CommonModule,
+    MainRoutingModule,
+    PrimeNGModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+  ],
   exports: [MainComponent],
   providers: [DataService],
 })

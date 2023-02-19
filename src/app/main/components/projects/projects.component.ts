@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/share/services/data.service';
 import { Project } from './project.interface';
@@ -12,7 +13,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[];
   projectsData$: Subscription;
 
-  constructor(private http: DataService) {}
+  constructor(private http: DataService, private translate: TranslateService) {}
 
   ngOnInit(): void {
     this.projectsData$ = this.http
@@ -26,7 +27,11 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.projectsData$.unsubscribe();
   }
 
-  toProject(link: string): void {
+  public currentLanguageIsEn(): boolean {
+    return this.translate.currentLang === 'en-US';
+  }
+
+  public toProject(link: string): void {
     window.location.href = link;
   }
 }
