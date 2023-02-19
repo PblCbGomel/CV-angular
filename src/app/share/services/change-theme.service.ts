@@ -4,8 +4,6 @@ import { Injectable } from '@angular/core';
 export class ChangeThemeService {
   themeLink = document.getElementById('themeLink') as HTMLLinkElement;
 
-  constructor() {}
-
   changeToLight() {
     this.themeLink.href = 'light-theme.css';
     localStorage.setItem('theme', 'light');

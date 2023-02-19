@@ -8,9 +8,8 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavigationComponent {
   items: MenuItem[];
-  styles: object;
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.items = [
       { label: 'Home', icon: 'pi pi-fw pi-home', routerLink: 'main' },
       { label: 'About me', icon: 'pi pi-fw pi-user', routerLink: 'about' },
