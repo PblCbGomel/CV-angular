@@ -15,8 +15,10 @@ export class ChangeThemeService {
   }
 
   themeAfterReloading() {
-    let themeLink = document.getElementById('themeLink') as HTMLLinkElement;
-    themeLink.href =
-      localStorage.getItem('theme') + '-theme.css' || 'light-theme.css';
+    if (localStorage.getItem('theme') !== null) {
+      let themeLink = document.getElementById('themeLink') as HTMLLinkElement;
+      themeLink.href =
+        localStorage.getItem('theme') + '-theme.css' || 'light-theme.css';
+    }
   }
 }
