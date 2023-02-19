@@ -6,5 +6,12 @@
     "p3": "I've got about 1 year of work experience in Innowise Group, where I've been working on several Pet-projects and one internal project.",
     "p4": "Outside of work, I like cooking some intersting dishes (cheesecakes for example). Also I'm studying in Faculty of Applied Mathematic and Computer Science, where I'm managing a science direction."
   },
-  "settings": { "language": "Language", "theme": "Theme" }
+  "settings": { "language": "Language", "theme": "Theme" },
+  "navigation": {
+    "home": "Home",
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  }
 }

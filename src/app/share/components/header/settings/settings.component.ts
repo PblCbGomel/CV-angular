@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class SettingsComponent implements OnInit, OnDestroy {
   items: MenuItem[];
-  languageSubscription: Subscription;
+  languageSubscription$: Subscription;
 
   constructor(
     private themeService: ChangeThemeService,
@@ -22,13 +22,13 @@ export class SettingsComponent implements OnInit, OnDestroy {
     this.translate.setDefaultLang(localStorage.getItem('lang') || 'en-US');
     this.translate.use(localStorage.getItem('lang') || 'en-US');
     this.themeService.themeAfterReloading();
-    this.languageSubscription = this.translate.onLangChange.subscribe(() => {
+    this.languageSubscription$ = this.translate.onLangChange.subscribe(() => {
       this.items = this.buildSettingsMenu();
     });
   }
 
   ngOnDestroy(): void {
-    this.languageSubscription.unsubscribe();
+    this.languageSubscription$.unsubscribe();
   }
 
   private buildSettingsMenu(): MenuItem[] {
