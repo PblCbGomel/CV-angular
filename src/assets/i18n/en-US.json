@@ -1,10 +1,10 @@
 {
   "main": { "name": "Evgeniy Shevtsov", "who": "Junior Front-End developer" },
   "about": {
-    "p1": "I'm programmer, specialising in Front-end development. I'm living and studing in Minsk now. And I desire to have a good job :)",
-    "p2": "I'm fond of finding resolve of some interesting tasks, creating a visual part of application, working with interfaces and self-developing. So, in the future, when I get a big experience in Front-end direction, I wish to learn adjacent vectors of web delelopment.",
-    "p3": "I've got about 1 year of work experience in Innowise Group, where I've been working on several Pet-projects and one internal project.",
-    "p4": "Outside of work, I like cooking some intersting dishes (cheesecakes for example). Also I'm studying in Faculty of Applied Mathematic and Computer Science, where I'm managing a science direction."
+    "p1": "I'm programmer, specializing in Front-end development. I live and study in Minsk. And I am eager to find a great job :)",
+    "p2": "I'm fond of resolving some interesting problems, creating a visual part of application, working with interfaces and self development. Therefore, in future, when I get a huge experience in Front-end, I wish to learn adjacent vectors of web development.",
+    "p3": "I've got about 1 year of work experience in Innowise Group, where I've been working on several Pet-projects and one internal project. This project was CV-generator for employees of company that included employees list, CV list, page with entities, generator pdf file of resume and, of course, authorization.",
+    "p4": "Outside the work, I am a huge fan of cooking. One of my signature dishes is cheesecake. Also I'm studying on Faculty of Applied Mathematic and Computer Science with mathematics as a major."
   },
   "settings": { "language": "Language", "theme": "Theme" },
   "navigation": {
