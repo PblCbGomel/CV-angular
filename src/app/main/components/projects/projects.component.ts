@@ -32,6 +32,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   }
 
   public toProject(link: string): void {
-    window.location.href = link;
+    window.open(link, '_blank');
   }
 }
