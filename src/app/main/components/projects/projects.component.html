@@ -1,7 +1,7 @@
 <div class="w-screen">
   <p-carousel
     [value]="projects"
-    [numVisible]="3"
+    [numVisible]="visibleNum"
     [numScroll]="1"
     [circular]="true"
   >
@@ -15,7 +15,7 @@
           <div class="mb-3 image-container">
             <img [src]="project.img" class="image" />
           </div>
-          <p class="text-sm">
+          <p class="text-sm description">
             {{
               currentLanguageIsEn()
                 ? project.descriptionEn

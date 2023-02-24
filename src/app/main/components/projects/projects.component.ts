@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/share/services/data.service';
@@ -12,8 +12,11 @@ import { Project } from './project.interface';
 export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[];
   projectsData$: Subscription;
+  visibleNum: number;
 
-  constructor(private http: DataService, private translate: TranslateService) {}
+  constructor(private http: DataService, private translate: TranslateService) {
+    this.visibleNum = window.screen.width > 720 ? 3 : 2;
+  }
 
   ngOnInit(): void {
     this.projectsData$ = this.http
@@ -25,6 +28,11 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.projectsData$.unsubscribe();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.visibleNum = event.target.innerWidth > 720 ? 3 : 2;
   }
 
   public currentLanguageIsEn(): boolean {

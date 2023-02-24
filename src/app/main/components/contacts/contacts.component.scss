@@ -1,11 +1,14 @@
 :host {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-  width: 30vw;
+  justify-content: space-around;
+  align-content: center;
+  width: 80%;
 }
 
-i {
-  font-size: 10rem;
+@media (max-width: 600px) {
+  :host {
+    width: 50%;
+    align-content: space-around;
+  }
 }
