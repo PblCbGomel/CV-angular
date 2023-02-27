@@ -1,1 +1,19 @@
-<p-tabMenu [model]="items"></p-tabMenu>
+<p-tabMenu
+  [model]="items"
+  [style.display]="showBurger ? 'none' : 'inherit'"
+></p-tabMenu>
+
+<button
+  type="button"
+  pButton
+  icon="pi pi-bars"
+  (click)="menu.toggle($event)"
+  class="h-4rem w-4rem"
+  [style.display]="showBurger ? 'inherit' : 'none'"
+></button>
+<p-menu
+  #menu
+  [popup]="true"
+  [model]="items"
+  [style.display]="showBurger ? 'inherit' : 'none'"
+></p-menu>

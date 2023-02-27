@@ -8,6 +8,7 @@ import { SettingsComponent } from './components/header/settings/settings.compone
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 import { NavigationComponent } from './components/header/navigation/navigation.component';
 import { ChangeThemeService } from './services/change-theme.service';
+import { ResolutionService } from './services/resolution.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,6 @@ import { ChangeThemeService } from './services/change-theme.service';
   ],
   imports: [CommonModule, ShareRoutingModule, PrimeNGModule],
   exports: [HeaderComponent, FooterComponent, PrimeNGModule],
-  providers: [ChangeThemeService],
+  providers: [ChangeThemeService, ResolutionService],
 })
 export class ShareModule {}

@@ -2,3 +2,9 @@
   width: 100vw;
   height: 8vh;
 }
+
+@media (max-width: 720px) {
+  :host {
+    height: 6vh;
+  }
+}

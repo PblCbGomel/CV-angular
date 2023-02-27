@@ -1,7 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
 import { Subscription } from 'rxjs';
+import { ResolutionService } from 'src/app/share/services/resolution.service';
 
 @Component({
   selector: 'app-navigation',
@@ -11,8 +12,14 @@ import { Subscription } from 'rxjs';
 export class NavigationComponent implements OnInit, OnDestroy {
   items: MenuItem[];
   navStream$: Subscription;
+  showBurger: boolean;
 
-  constructor(private translate: TranslateService) {}
+  constructor(
+    private translate: TranslateService,
+    private screenResolution: ResolutionService
+  ) {
+    this.showBurger = screenResolution.widthGreaterThanMobile() ? false : true;
+  }
 
   ngOnInit(): void {
     this.navStream$ = this.translate.onLangChange.subscribe(() => {
@@ -22,6 +29,13 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.navStream$.unsubscribe();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  changeBurgerVisible(event: any): void {
+    this.showBurger = this.screenResolution.widthGreaterThanMobile()
+      ? false
+      : true;
   }
 
   private buildNavigationMenu(): MenuItem[] {

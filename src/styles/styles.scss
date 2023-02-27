@@ -45,6 +45,10 @@ i::before {
   * {
     font-size: 10px;
   }
+
+  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+    height: 6vh;
+  }
 }
 
 @media (max-width: 600px) {

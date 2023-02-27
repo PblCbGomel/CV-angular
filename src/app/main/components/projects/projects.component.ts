@@ -2,6 +2,7 @@ import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/share/services/data.service';
+import { ResolutionService } from 'src/app/share/services/resolution.service';
 import { Project } from './project.interface';
 
 @Component({
@@ -14,8 +15,12 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   projectsData$: Subscription;
   visibleNum: number;
 
-  constructor(private http: DataService, private translate: TranslateService) {
-    this.visibleNum = window.screen.width > 720 ? 3 : 2;
+  constructor(
+    private http: DataService,
+    private translate: TranslateService,
+    private screenResolution: ResolutionService
+  ) {
+    this.visibleNum = screenResolution.widthGreaterThanMobile() ? 3 : 2;
   }
 
   ngOnInit(): void {
@@ -31,8 +36,8 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.visibleNum = event.target.innerWidth > 720 ? 3 : 2;
+  changeVisibleNum(event: any): void {
+    this.visibleNum = this.screenResolution.widthGreaterThanMobile() ? 3 : 2;
   }
 
   public currentLanguageIsEn(): boolean {

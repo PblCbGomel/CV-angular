@@ -2,3 +2,18 @@
   width: 100vw;
   height: 8vh;
 }
+
+header {
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  :host {
+    height: 6vh;
+  }
+
+  header {
+    justify-content: space-around;
+  }
+}
