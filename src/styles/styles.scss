@@ -43,17 +43,21 @@ i::before {
 
 @media (max-width: 720px) {
   * {
-    font-size: 10px;
+    font-size: 18px;
   }
 
-  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
-    height: 6vh;
+  span::before {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 600px) {
+  * {
+    font-size: 16px;
+  }
+
   span {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   h1 {
@@ -64,7 +68,12 @@ i::before {
     font-size: 1rem;
   }
 
-  i::before {
-    font-size: 8rem;
+  p-menu .p-menu-list .p-menuitem .p-menuitem-link {
+    width: 20rem;
+    padding: 20px;
+  }
+
+  p-menu .p-menu-list .p-menuitem .p-menuitem-icon {
+    margin-right: 10px;
   }
 }
