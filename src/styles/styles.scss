@@ -9,6 +9,10 @@
   font-family: "Jost", sans-serif;
 }
 
+*::selection {
+  background-color: rgb(139, 0, 219);
+}
+
 span {
   font-size: 1.25rem;
 }
@@ -43,21 +47,17 @@ i::before {
 
 @media (max-width: 720px) {
   * {
-    font-size: 18px;
+    font-size: 10px;
   }
 
-  span::before {
-    font-size: 1rem;
+  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+    height: 6vh;
   }
 }
 
 @media (max-width: 600px) {
-  * {
-    font-size: 16px;
-  }
-
   span {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   h1 {
@@ -66,6 +66,10 @@ i::before {
 
   p {
     font-size: 1rem;
+  }
+
+  i::before {
+    font-size: 8rem;
   }
 
   p-menu .p-menu-list .p-menuitem .p-menuitem-link {

@@ -12,3 +12,8 @@ app-settings .p-button {
   box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16),
     0 3px 6px rgba(255, 255, 255, 0.23);
 }
+
+.content:hover {
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.08);
+}

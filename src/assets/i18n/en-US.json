@@ -1,5 +1,9 @@
 {
-  "main": { "name": "Evgeniy Shevtsov", "who": "Junior Front-End developer" },
+  "main": {
+    "name": "Evgeniy Shevtsov",
+    "age": "19 y.o.",
+    "who": "Junior Front-End developer"
+  },
   "about": {
     "p1": "I'm programmer, specializing in Front-end development. I live and study in Minsk. And I am eager to find a great job :)",
     "p2": "I'm fond of resolving some interesting problems, creating a visual part of application, working with interfaces and self development. Therefore, in future, when I get a huge experience in Front-end, I wish to learn adjacent vectors of web development.",
