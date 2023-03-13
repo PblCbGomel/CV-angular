@@ -55,6 +55,13 @@
       "img": "assets/project-images/portfolio.png",
       "descriptionEn": "Interesting and beautiful photographer's portfolio.",
       "descriptionRu": "Интересное и красивое портфолио фотографа."
+    },
+    {
+      "name": "Shelter",
+      "link": "https://pblcbgomel.github.io/shelter-RSS/pages/main/",
+      "img": "assets/project-images/shelter.png",
+      "descriptionEn": "Two-page site for the shelter in Boston.",
+      "descriptionRu": "Двухстраничный сайт для питомника в Бостоне."
     }
   ]
 }
